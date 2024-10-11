@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="overlay">
+    <header>
+        <div class="logo"><a href="index.html">
+            <img src="images/logo.jpg" height="30">
+        </a></div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="currenlty-showing.html">Currently Showing</a></li>
+                <li><a href="coming-soon.html">Coming Soon</a></li>
+                <li><a href="team.html">Team</a></li>
+            </ul>
+            <button class="signin-btn"><a href="signin.html" target="_blank">Sign In</a> </button>
+        </div>
+    </header>
+    <section class="movie-info">
+        <div class="poster">
+            <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/oppenheimer-et00347867-1683533414.jpg" class="movie-img" width="280"><br>
+            <button class="btn"><a href="https://www.youtube.com/watch?v=uYPbbksJxIg" target="_blank" class="trailer">View Trailer&nbsp; <i class="fa-solid fa-video"></i></a></button>
+        </div>
+        <div class="info">
+            <h2><span class="movie-title">OPPENHEIMER</span></h2>
+            <div class="line light"></div>
+            <p>Release Date: <span class="release">July 21</span></p>
+            <div><i class="fa-solid fa-star"></i> <span class="rating">8.7</span></div>
+            <div>
+                <span class="dur">182</span> mins &#8226;
+                <span class="genre">Biography, Drama, History</span> &#8226;
+                <span class="cert">UA</span>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <h3>About The Movie</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum harum ipsa provident reiciendis ullam adipisci libero, eius repellendus reprehenderit, quibusdam officiis veritatis ab voluptas officia deleniti repellat facilis. Similique unde quasi, ducimus asperiores officia velit officiis, repellat omnis dignissimos nam quae alias! Nostrum velit libero ex quam alias voluptatem hic.</p>
+    </section>
+    <p class="btnp"><button class="book">
+        Book Ticket <i class="fa-solid fa-ticket"></i></button>
+    </p>
+    </div>
+
+    <div class="slot">
+        <div class="slot-heading">
+            <h3>SLOT BOOKING</h3>
+            <button class="close-btn"><i class="fa-solid fa-x"></i></button>
+        </div>
+        <form id="slotbox" action="layout.html">
+            <div class="date">
+               <span>Select Date:<span> <input type="date" name="myDate" id="date">
+            </div>
+            <br>
+            <div class="time">
+                    <label for="time">Select Time Slot :</label>
+                    <select name="myTime" id="time">
+                        <option value="08:00" selected>08:00 hrs</option>
+                        <option value="11:00">11:00 hrs</option>
+                        <option value="14:00">14:00 hrs</option>
+                        <option value="17:00">17:00 hrs</option>
+                        <option value="21:00">21:00 hrs</option>
+                    </select>
+            </div>
+            <button class="book confirm-btn">Book Now</button>
+        </form>
+    </div>
+    
+
+    <script>
+        const movieImg = document.querySelector('.movie-img');
+        const title = document.querySelector('.movie-title');
+        const date = document.querySelector('.release');
+        const rating = document.querySelector('.rating')
+        const dur = document.querySelector('.dur');
+        const genre = document.querySelector('.genre');
+        const cert = document.querySelector('.cert');
+        const vidBtn = document.querySelector(".trailer");
+
+        const movieInfo = JSON.parse(localStorage.getItem('movieInfo'));
+        
+        movieImg.src = movieInfo.img;
+        title.textContent = movieInfo.title;
+        date.textContent = movieInfo.date;
+        rating.textContent = movieInfo.rating;
+        dur.textContent = movieInfo.duration;
+        genre.textContent = movieInfo.genre;
+        cert.textContent = movieInfo.cert;
+        vidBtn.href = movieInfo.video;
+
+
+        //displaying and hiding popup
+        const popup = document.querySelector(".slot");
+        const closeBtn = document.querySelector(".close-btn");
+        const bookBtn = document.querySelector(".book");
+
+        bookBtn.addEventListener("click", ()=> {
+            popup.style.display = "block";
+            document.querySelector(".overlay").style.opacity = 0.5;
+        })
+
+        closeBtn.addEventListener("click", () => {
+            popup.style.display = "none";
+            document.querySelector(".overlay").style.opacity = 1;
+        })
+
+        //slot form validation
+        const form = document.getElementById("slotbox");
+        const dateInput = document.getElementById("date");
+        const timeInput = document.getElementById("time");
+
+        form.addEventListener("submit", (e) => {
+            if (dateInput.value === "" || timeInput.value === "") {
+                alert("Please select time and date");
+                e.preventDefault();
+            }
+            localStorage.setItem("Date", dateInput.value);
+            localStorage.setItem("Time", timeInput.value);
+        })
+        
+
+    </script>
+</body>
+</html>

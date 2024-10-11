@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlickFare</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="#">
+            <img src="images/logo.jpg" height="30">
+        </a></div>
+        <div class="menu">
+            <ul>
+                <li><a href="#" class="current">Home</a></li>
+                <li><a href="currenlty-showing.html">Currently Showing</a></li>
+                <li><a href="coming-soon.html">Coming Soon</a></li>
+                <li><a href="team.html">Team</a></li>
+            </ul>
+            <button class="signin-btn"><a href="signin.html">Sign In</a> </button>
+        </div>
+    </header>
+    <section class="front">
+        <div class="title-text">
+            <h1>FLICK<span>FARE</span></h1>
+            <p>Your Gateway to the Silver Screen</p>
+        </div>
+        <div class="title-img">
+            <img src="images/theatre.jpg" class="resize">
+        </div>
+    </section>
+
+    <section class="trending">
+        <div class="text">
+            <h2>TRENDING NOW</h2>
+            <div class="line dark"></div>
+            <p>Join the hype: Discover the never ending movie sensation</p>
+        </div>
+        <div class="movies">
+            <div class="movie-card movie-container">
+                <a href="movie-desc.html">
+                    <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/oppenheimer-et00347867-1683533414.jpg" width="200">
+                    <div class="movie-text">Go To Movie <i class="fa-solid fa-arrow-right"></i></div>
+                </a>
+                <p>Oppenheimer</p>
+            </div>
+            <div class="movie-card movie-container">
+                <a href="movie-desc.html">
+                    <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/mission-impossible-dead-reckoning--part-one-et00329481-1688284554.jpg" width="200">
+                    <div class="movie-text">Go To Movie <i class="fa-solid fa-arrow-right"></i></div>
+                </a>
+                <p>Mission Impossible: Dead Reckoning</p>
+            </div>
+            <div class="movie-card movie-container">
+                <a href="movie-desc.html">
+                    <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/barbie-et00072466-1688969871.jpg" width="200">
+                    <div class="movie-text">Go To Movie <i class="fa-solid fa-arrow-right"></i></div>
+                </a>
+                <p>Barbie</p>
+            </div>
+            <div class="movie-card movie-container">
+                <a href="movie-desc.html">
+                    <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/spider-man-across-the-spider-verse-et00347275-1684425314.jpg" width="200">
+                    <div class="movie-text">Go To Movie <i class="fa-solid fa-arrow-right"></i></div>
+                </a>
+                <p>Spider-Man: Across the Spider-Verse</p>
+            </div>
+            <div class="movie-card movie-container">
+                <a href="movie-desc.html">
+                    <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/elemental-et00356210-1680175819.jpg" width="200">
+                    <div class="movie-text">Go To Movie <i class="fa-solid fa-arrow-right"></i></div>
+                </a>
+                <p>Elemental</p>
+            </div>
+        </div>
+    </section>
+    <section class="currently">
+        <div class="text">
+            <h2>CURRENTLY SHOWING</h2>
+            <div class="line light"></div>
+            <p>Catch the action live in theatres today!</p>
+            <a href="currenlty-showing.html">
+                <button class="btn">Explore <i class="fa-solid fa-arrow-right"></i></button>
+            </a>
+        </div>
+        <img src="https://www.hawkherald.com/wp-content/uploads/sites/4/2023/01/Screenshot-2023-01-23-11.04.49-AM.png" width="500" class="resize">
+    </section>
+    <section class="currently coming">
+        <img src="https://images.yourstory.com/cs/2/3fb20ae02dc911e9af58c17e6cc3d915/Imageuues-1604750423473.jpg?w=1152&fm=auto&ar=2:1&mode=crop&crop=faces" width="500" class="resize">
+        <div class="text">
+            <h2>COMING SOON</h2>
+            <div class="line light"></div>
+            <p>Discover a new world coming to theatres near you</p>
+            <a href="coming-soon.html">
+                <button class="btn">Explore <i class="fa-solid fa-arrow-right"></i></button>
+            </a>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
