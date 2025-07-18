@@ -1,4 +1,5 @@
-# FlickFare - Your Gateway to the Silver Screen
+# FlickFare - MOVIE BOOKING WEBSITE
+
 
 FlickFare is a simple and intuitive static movie booking website designed to provide users with an easy way to explore movies currently showing and coming soon, view detailed information, watch trailers, and simulate ticket bookings.
 
