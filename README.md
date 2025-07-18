@@ -93,3 +93,5 @@ To get a local copy up and running, follow these simple steps:
 * **Team (`team.html`):** Learn more about the project contributors and view their resumes.
 
 ---
+📜 License
+This project is licensed under the MIT License. See the LICENSE file for more details.
